@@ -6,12 +6,12 @@
 
 {% block body %}
     <h1 class="welcome-msg1 text-center">Change your password</h1>
-    {% with messages = get_flashed_messages() %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            {% for message in messages %}
+            {% for category, message in messages %}
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6">
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
                             {{message}}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>

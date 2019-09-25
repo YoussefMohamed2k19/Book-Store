@@ -267,16 +267,27 @@ def setting():
         email = session["user_email"]
         rows = db.execute("SELECT * FROM users WHERE email = :email",
                             {"email": email})
-        
         result = rows.fetchone()
+
+        if not request.form.get("password"):
+            flash("must provide current password.", 'danger')
+            return redirect(url_for('setting'))
+
+        if not request.form.get("newpassword"):
+            flash("must provide new password.", 'danger')
+            return redirect(url_for('setting')) 
+
         if result == None or not check_password_hash(result[3], request.form.get("password")):
             flash("invalid password!")
             return redirect(url_for('setting'))
         hashedPassword = generate_password_hash(request.form.get("newpassword"), method='pbkdf2:sha256', salt_length=8)
-        db.execute(
+        if db.execute(
                     "UPDATE users SET password = :password where id= :user_id",
-                    {"password":hashedPassword, 'user_id' : session["user_id"]})
-        db.commit()
+                    {"password":hashedPassword, 'user_id' : session["user_id"]}):
+        
+            db.commit()
+            flash("Your password updated!", 'success')
+            return redirect(url_for('setting'))
         return render_template("setting.html")
 
 if __name__ == '__main__':
