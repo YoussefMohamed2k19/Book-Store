@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <br>
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Oops!! Error Occurred</h4>
+      <p style="font-size: 17px; margin:10px;">
+        {{ message }}
+      </p>
+      <h7>Back to <a href="/register" style="text-decoration: underline; font-size:16px;"> sign Up</a> Page</h7>
+    </div>
+
+{% endblock %}

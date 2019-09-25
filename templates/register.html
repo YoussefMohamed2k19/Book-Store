@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <form action="/register" method="post" >
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100">
+                    <form class="login100-form validate-form">
+                        <span class="login100-form-title p-b-26">
+                            Welcome
+                        </span>
+                        
+                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                            <input class="input100" autocomplete="off" type="email" name="email" aria-describedby="emailHelp">
+                            <span class="focus-input100" data-placeholder="Email"></span>
+                        </div>
+                        
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100" autocomplete="off" type="text" name="username">
+                            <span class="focus-input100" data-placeholder="Username"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input100" name="password" type="password" id="password">
+                            <span class="focus-input100" data-placeholder="Password"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input100" name="confirmation" type="password">
+                            <span class="focus-input100" data-placeholder="Password Again"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn" type="submit">
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="text-center p-t-45">
+                            <span class="txt1">
+                                Do you have an account?
+                            </span>
+    
+                            <a class="txt2" href="/login">
+                                Sign In
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,114 @@
+body{
+    background-color: #1a2849;
+}
+.navbar{
+    background-color: #505bda;
+    padding: 0px;
+}
+.nav-link{
+    color:white;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 18px;
+}
+.nav li:last-child{
+    margin-right:45px;
+}
+a:hover {
+    color: #1a2849;
+}
+.logo{
+    width:auto;
+    height: 40px;
+    margin-left:45px;
+}
+.welcome-msg1{
+    padding: 30px;
+    color:#52de97;
+}
+.welcome-msg2{
+    padding-bottom: 30px;
+    color:#52de97;
+}
+.vertical-center{
+    position: flex;
+    width: 100%;
+    height: 250px;
+    margin: 150px auto;
+}
+.search-input{
+    width: 30%;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+.card{
+    margin: 10px;
+}
+.list-group-item {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+}
+.list-group li{
+    color: white;
+}
+.bookpage-msg{
+    color:#52de97;
+    padding-bottom: 50px;
+}
+.form-check-label{
+    padding-left: 0px;
+}
+.form-check-inline+.form-check-inline {
+    margin-left: 0rem;
+}
+hr.style14 { 
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+.table-dark, .table-dark>td, .table-dark>th {
+background-color: #343a40;
+}
+.table{
+    background-color: #3c70a4;
+    border-radius: 7px;
+}
+.table-dark th, .table-dark thead th {
+    border-top: 0px;
+}
+footer{
+    margin: 20px;
+}
+.updatePw label{
+    margin:0 auto;
+    color:#52de97;
+    text-align: center;
+}
+form{
+    margin: 20px;
+}
+@media(max-width:800px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .search-input{
+        width: 50%;
+    }
+    .bookImage{
+        margin-bottom: 40px;
+    }
+    .list-group{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .nav li:last-child{
+        margin-right: 10px;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+  }

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Setting
+{% endblock %}
+
+{% block body %}
+    <h1 class="welcome-msg1 text-center">Change your password</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/setting" method="POST" class="updatePw">
+        <div class="form-group row justify-content-center">
+            <label for="inputPassword" class="col-lg-12 col-form-label">Current Password</label>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <input type="password" class="form-control" name="password" placeholder="Old Password">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <label for="inputPassword" class="col-lg-12 col-form-label">New Password</label>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <input type="password" class="form-control" name="newpassword" placeholder="New Password">
+            </div>
+        </div>
+    <button type="submit" class="btn btn-primary mb-2 d-block mx-auto px-10">Confirm Password</button>
+    </form>
+{% endblock %}

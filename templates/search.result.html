@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result Page
+{% endblock %}
+
+{% block body%}
+    <div class="container results-container">
+        <h1 class="welcome-msg1 text-center">Your Search Results</h1>
+        <div class="row">
+        {% for book in books %}
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title"> {{ book['title']}}</h5>
+                <p class="card-text">By {{ book['author']}} at {{ book['year']}}.</p>
+                <a href="/bookPage/{{ book['id'] }}" class="btn btn-primary">Go to book page</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
