@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, request, jsonify, session, redirect, flash, url_for
 from flask_session import Session
