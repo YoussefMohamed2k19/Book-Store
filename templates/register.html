@@ -63,4 +63,18 @@
             </div>
         </div>
     </form>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="{{url_for('static', filename='js/boot4script.js')}}"></script>
+    <script>
+        $(window).load(function() {
+            boot4.alert(
+            {
+            msg: "Because your time are so important to me, You can login by this information to test my website without register new account. <br>Email: tester@domain.com <br>Password: 123456tester",
+            title: "Hey!",
+            callback: function() {
+                console.log("callback");
+            }
+            },"OK");
+        });
+    </script>
 {% endblock %}

@@ -2,7 +2,6 @@ asn1crypto==0.24.0
 astroid==2.2.5
 Babel==2.7.0
 certifi==2019.9.11
-cffi==1.12.3
 chardet==3.0.4
 Click==7.0
 colorama==0.4.1
@@ -48,3 +47,4 @@ urllib3==1.25.5
 Werkzeug==0.15.6
 wrapt==1.11.2
 WTForms==2.2.1
+cffi==1.12.3
